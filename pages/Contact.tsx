@@ -31,8 +31,8 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <div className="pt-32 pb-24 px-6 min-h-screen bg-[#222831]">
-      <section className="max-w-4xl mx-auto text-center mb-16">
+    <div className="pt-24 md:pt-32 pb-24 px-4 md:px-6 min-h-screen bg-[#222831]">
+      <section className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00D4FF]/10 border border-[#00D4FF]/20 text-[#00D4FF] text-[10px] font-bold uppercase tracking-widest mb-6">
             <span className="relative flex h-2 w-2">
@@ -41,12 +41,12 @@ const Contact: React.FC = () => {
             </span>
             Available Now
           </div>
-          <h1 className="text-5xl md:text-8xl font-bold text-white mb-6">Let's <span className="text-[#00D4FF]">Scale</span></h1>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">Skip the friction. Choose your preferred channel to start your creative evolution.</p>
+          <h1 className="text-4xl md:text-8xl font-bold text-white mb-6">Let's <span className="text-[#00D4FF]">Scale</span></h1>
+          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">Skip the friction. Choose your preferred channel to start your creative evolution.</p>
         </motion.div>
       </section>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
         {/* Booking Card */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="glass-panel p-8 rounded-[2.5rem] flex flex-col justify-between group">
           <div>
@@ -111,8 +111,8 @@ const Contact: React.FC = () => {
 
       <AnimatePresence>
         {isBookingOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl" onClick={() => setIsBookingOpen(false)}>
-            <motion.div initial={{ scale: 0.95, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.95, y: 20 }} className="relative w-full max-w-5xl h-[80vh] bg-[#393E46] rounded-[2.5rem] overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-4 bg-black/95 backdrop-blur-xl" onClick={() => setIsBookingOpen(false)}>
+            <motion.div initial={{ scale: 0.95, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.95, y: 20 }} className="relative w-full max-w-5xl h-[90vh] md:h-[80vh] bg-[#393E46] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
               <div className="absolute top-0 inset-x-0 h-14 bg-[#222831] border-b border-white/5 flex items-center justify-between px-6 z-10">
                 <span className="text-[10px] font-bold text-white uppercase tracking-widest">Secure Booking</span>
                 <button onClick={() => setIsBookingOpen(false)} className="text-white hover:text-[#00D4FF]"><X size={20} /></button>

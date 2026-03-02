@@ -6,20 +6,20 @@ const About: React.FC = () => {
   return (
     <div className="pt-24 min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/3 h-full bg-[#00D4FF]/5 -skew-x-12 transform translate-x-20 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="max-w-3xl"
+            className="max-w-3xl text-center md:text-left"
           >
-            <h4 className="text-[#00D4FF] font-bold tracking-widest uppercase mb-4 text-sm">Who We Are</h4>
-            <h1 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h4 className="text-[#00D4FF] font-bold tracking-widest uppercase mb-4 text-xs md:text-sm">Who We Are</h4>
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
               We're not just editors.<br/>
               We are <span className="text-[#00D4FF]">Growth Partners</span>.
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
               ShortsBy Ali was born out of a simple frustration: Traditional editors care about "cinematic" shots. 
               We care about <strong>retention graphs, click-through rates, and ROI</strong>. 
               We bridge the gap between high-end production and performance marketing.
@@ -29,8 +29,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
           {[
             {
               icon: <Target className="w-10 h-10 text-[#00D4FF]" />,
@@ -65,8 +65,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Team / Story Section */}
-      <section className="py-32 px-6 bg-[#393E46]/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <section className="py-20 md:py-32 px-6 bg-[#393E46]/10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
           <div className="w-full md:w-1/2">
              <motion.div 
                initial={{ opacity: 0, scale: 0.9 }}
@@ -78,18 +78,18 @@ const About: React.FC = () => {
                <div className="absolute inset-0 bg-[#00D4FF]/10 mix-blend-overlay"></div>
              </motion.div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Built for the Modern Creator Economy</h2>
-              <p className="text-gray-400 mb-6 leading-relaxed text-lg">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 md:mb-8">Built for the Modern Creator Economy</h2>
+              <p className="text-gray-400 mb-6 leading-relaxed text-base md:text-lg">
                 Founded in 2023, ShortsBy Ali started as a specialized team of editors who realized that the "old way" of video production was dead. 
                 Creators needed speed. Brands needed adaptability. 
               </p>
-              <p className="text-gray-400 mb-6 leading-relaxed text-lg">
+              <p className="text-gray-400 mb-6 leading-relaxed text-base md:text-lg">
                 Today, we are a fully remote team of specialized editors, strategists, and designers working with some of the fastest-growing personal brands on the internet.
               </p>
             </motion.div>

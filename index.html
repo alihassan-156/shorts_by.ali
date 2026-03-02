@@ -20,9 +20,14 @@
         h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
         .glass-panel {
             background: rgba(57, 62, 70, 0.4);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: border-color 0.3s ease;
+        }
+        @media (min-width: 768px) {
+            .glass-panel {
+                backdrop-filter: blur(12px);
+            }
         }
         .glass-panel:hover { border-color: rgba(0, 212, 255, 0.2); }
         ::-webkit-scrollbar { width: 6px; }

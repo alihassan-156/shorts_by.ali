@@ -31,10 +31,13 @@ const Bubble: React.FC<{ size: number; x: string; y: string; duration: number; d
 const FloatingBubbles: React.FC = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-      <Bubble size={400} x="10%" y="20%" duration={8} delay={0} />
-      <Bubble size={300} x="70%" y="10%" duration={12} delay={2} />
-      <Bubble size={500} x="40%" y="60%" duration={10} delay={4} />
-      <Bubble size={250} x="85%" y="75%" duration={15} delay={1} />
+      <Bubble size={150} x="5%" y="15%" duration={10} delay={0} />
+      <Bubble size={120} x="75%" y="5%" duration={14} delay={2} />
+      <div className="hidden md:block">
+        <Bubble size={400} x="40%" y="60%" duration={12} delay={4} />
+        <Bubble size={200} x="85%" y="75%" duration={18} delay={1} />
+        <Bubble size={300} x="20%" y="80%" duration={15} delay={3} />
+      </div>
     </div>
   );
 };

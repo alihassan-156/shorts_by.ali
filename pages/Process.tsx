@@ -10,19 +10,19 @@ const Step = ({ number, title, desc, align = 'left' }: { number: string; title: 
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-24 ${align === 'right' ? 'md:flex-row-reverse' : ''}`}
+    className={`flex flex-col md:flex-row items-center gap-4 md:gap-16 mb-20 md:mb-24 ${align === 'right' ? 'md:flex-row-reverse' : ''}`}
   >
     <div className={`w-full md:w-1/2 flex justify-center ${align === 'right' ? 'md:justify-start' : 'md:justify-end'}`}>
-       <div className="text-[120px] md:text-[220px] font-bold text-white/5 leading-none select-none tracking-tighter">
+       <div className="text-[80px] sm:text-[120px] md:text-[220px] font-bold text-white/5 leading-none select-none tracking-tighter">
          {number}
        </div>
     </div>
-    <div className={`w-full md:w-1/2 text-center ${align === 'right' ? 'md:text-left' : 'md:text-left'}`}>
-      <div className="inline-block px-4 py-1 rounded-full bg-[#00D4FF]/10 text-[#00D4FF] text-xs font-bold uppercase tracking-widest mb-4">
+    <div className={`w-full md:w-1/2 text-center md:text-left`}>
+      <div className="inline-block px-4 py-1 rounded-full bg-[#00D4FF]/10 text-[#00D4FF] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4">
         Phase {number}
       </div>
-      <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">{title}</h3>
-      <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-md mx-auto md:mx-0">
+      <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">{title}</h3>
+      <p className="text-base md:text-xl text-gray-400 leading-relaxed max-w-md mx-auto md:mx-0">
         {desc}
       </p>
     </div>
@@ -33,15 +33,15 @@ const Process: React.FC = () => {
   return (
     <div className="pt-24 min-h-screen">
       {/* Header */}
-      <section className="py-24 px-6 text-center relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#00D4FF]/5 to-transparent pointer-events-none" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mx-auto relative z-10"
         >
-          <h1 className="text-5xl md:text-8xl font-bold text-white mb-8">Our <span className="text-[#00D4FF]">Workflow</span></h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <h1 className="text-4xl md:text-8xl font-bold text-white mb-6 md:mb-8">Our <span className="text-[#00D4FF]">Workflow</span></h1>
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             We've refined our process to be as hands-off for you as possible. You focus on recording; we handle the rest.
           </p>
         </motion.div>

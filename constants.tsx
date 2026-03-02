@@ -73,10 +73,14 @@ export const PRICING = [
 ];
 
 export const PORTFOLIO: PortfolioItem[] = [
-  { id: '1', title: 'Tech Review Hook', category: 'Social', thumbnail: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=400&h=711', youtubeId: 'dQw4w9WgXcQ' },
-  { id: '2', title: 'Streetwear Drop', category: 'Commercial', thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=400&h=711', youtubeId: 'dQw4w9WgXcQ' },
-  { id: '3', title: 'Podcast Viral Clip', category: 'Social', thumbnail: 'https://images.unsplash.com/photo-1492619334760-227b3a7cb9ec?auto=format&fit=crop&q=80&w=400&h=711', youtubeId: 'dQw4w9WgXcQ' },
-  { id: '4', title: 'Fitness Motivation', category: 'Short Film', thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=711', youtubeId: 'dQw4w9WgXcQ' }
+  { id: '1', title: 'Tech Review Hook', category: 'Social', thumbnail: 'https://img.youtube.com/vi/wVllUGwmXD4/maxresdefault.jpg', youtubeId: 'wVllUGwmXD4' },
+  { id: '2', title: 'Streetwear Drop', category: 'Commercial', thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg', youtubeId: 'dQw4w9WgXcQ' },
+  { id: '3', title: 'Podcast Viral Clip', category: 'Social', thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg', youtubeId: 'dQw4w9WgXcQ' },
+  { id: '4', title: 'Fitness Motivation', category: 'Short Film', thumbnail: 'https://img.youtube.com/vi/x-i0LNNZIXA/maxresdefault.jpg', youtubeId: 'x-i0LNNZIXA' },
+  { id: '5', title: 'Gym Progress', category: 'Short Film', thumbnail: 'https://img.youtube.com/vi/Ja4J-ImmoLU/maxresdefault.jpg', youtubeId: 'Ja4J-ImmoLU' },
+  { id: '6', title: 'Workout Routine', category: 'Short Film', thumbnail: 'https://img.youtube.com/vi/cGhyy_QkUJ0/maxresdefault.jpg', youtubeId: 'cGhyy_QkUJ0' },
+  { id: '7', title: 'Elite Training', category: 'Short Film', thumbnail: 'https://img.youtube.com/vi/q_RufaiJsZU/maxresdefault.jpg', youtubeId: 'q_RufaiJsZU' },
+  { id: '8', title: 'Powerlifting', category: 'Short Film', thumbnail: 'https://img.youtube.com/vi/QlnIAGarPV4/maxresdefault.jpg', youtubeId: 'QlnIAGarPV4' }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

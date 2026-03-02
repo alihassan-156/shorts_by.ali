@@ -60,12 +60,12 @@ const LiquidButton: React.FC<LiquidButtonProps> = ({
             animate={{ scale: 1.2, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             transition={{ type: 'spring', damping: 12, stiffness: 100 }}
-            className="absolute pointer-events-none rounded-full bg-[#00D4FF] blur-2xl"
+            className="absolute pointer-events-none rounded-full bg-[#00D4FF] blur-xl md:blur-2xl hidden md:block"
             style={{
-              width: '140px',
-              height: '140px',
-              left: mousePos.x - 70,
-              top: mousePos.y - 70,
+              width: '100px',
+              height: '100px',
+              left: mousePos.x - 50,
+              top: mousePos.y - 50,
             }}
           />
         )}

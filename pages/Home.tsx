@@ -10,35 +10,35 @@ const Home: React.FC = () => {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative">
+      <section className="min-h-[85vh] md:min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl"
         >
-          <div className="inline-block px-4 py-1 rounded-full border border-[#00D4FF]/30 bg-[#00D4FF]/5 text-[#00D4FF] text-xs font-bold uppercase tracking-widest mb-8">
+          <div className="inline-block px-4 py-1 rounded-full border border-[#00D4FF]/30 bg-[#00D4FF]/5 text-[#00D4FF] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">
             Short-Form Specialized Agency
           </div>
-          <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white mb-6 md:mb-8 leading-tight">
             Stop Scrolling. <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#DFD0B8]">Start Dominating.</span>
           </h1>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-            High-Retention Short-Form Editing for Brands and Businesss That Want to Dominate Social Media
+          <p className="text-lg md:text-xl text-gray-400 mb-10 md:mb-12 max-w-2xl mx-auto px-4">
+            High-Retention Short-Form Editing for Brands and Businesses That Want to Dominate Social Media
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/portfolio">
-              <LiquidButton className="text-lg px-10 py-4">View Showreel</LiquidButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <Link to="/portfolio" className="w-full sm:w-auto">
+              <LiquidButton className="text-lg px-10 py-4 w-full">View Showreel</LiquidButton>
             </Link>
-            <Link to="/services">
-              <LiquidButton variant="outline" className="text-lg px-10 py-4">Explore Pricing</LiquidButton>
+            <Link to="/services" className="w-full sm:w-auto">
+              <LiquidButton variant="outline" className="text-lg px-10 py-4 w-full">Explore Pricing</LiquidButton>
             </Link>
           </div>
         </motion.div>
       </section>
 
       {/* Pillars */}
-      <section className="py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="py-20 md:py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {SERVICES.map((s, i) => (
           <motion.div 
             key={s.id}
@@ -56,18 +56,18 @@ const Home: React.FC = () => {
       </section>
 
       {/* Selected Works - 9:16 Ratio */}
-      <section className="py-32 bg-[#393E46]/10 px-6 overflow-hidden">
+      <section className="py-20 md:py-32 bg-[#393E46]/10 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-8">
+            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
               Crafted for <br/> <span className="text-[#00D4FF]">Vertical Dominance</span>
             </h2>
-            <Link to="/portfolio">
-              <LiquidButton variant="outline">View All Work</LiquidButton>
+            <Link to="/portfolio" className="w-full sm:w-auto">
+              <LiquidButton variant="outline" className="w-full sm:w-auto">View All Work</LiquidButton>
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {PORTFOLIO.map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {PORTFOLIO.slice(0, 4).map((item) => (
               <PortfolioCard key={item.id} item={item} />
             ))}
           </div>
@@ -75,10 +75,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Workflow - Liquid Timeline */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center">Our Workflow</h2>
-          <div className="relative border-l-2 border-[#00D4FF]/20 pl-8 ml-4 md:ml-0 space-y-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 md:mb-20 text-center">Our Workflow</h2>
+          <div className="relative border-l-2 border-[#00D4FF]/20 pl-8 ml-2 md:ml-0 space-y-12 md:space-y-16">
             {WORKFLOW_STEPS.map((step, i) => (
               <motion.div 
                 key={i}
@@ -97,8 +97,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 px-6 bg-[#393E46]/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-20 md:py-32 px-6 bg-[#393E46]/5">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {TESTIMONIALS.map((t) => (
             <div key={t.id} className="glass-panel p-8 rounded-3xl">
               <div className="flex items-center gap-4 mb-6">
@@ -115,13 +115,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto glass-panel rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+      <section className="py-20 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto glass-panel rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
           <div className="absolute -right-20 -top-20 w-80 h-80 bg-[#00D4FF]/10 blur-[100px] rounded-full" />
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Ready to evolve?</h2>
+          <h2 className="text-3xl md:text-6xl font-bold text-white mb-8">Ready to evolve?</h2>
           <div className="flex justify-center">
-            <Link to="/contact">
-              <LiquidButton className="text-xl px-12 py-5">Start Your Trial</LiquidButton>
+            <Link to="/contact" className="w-full sm:w-auto">
+              <LiquidButton className="text-xl px-12 py-5 w-full sm:w-auto">Start Your Trial</LiquidButton>
             </Link>
           </div>
         </div>
